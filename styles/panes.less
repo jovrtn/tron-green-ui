@@ -1,0 +1,58 @@
+@import "ui-mixins";
+@import "ui-variables";
+@import "buttons";
+.pane-item {
+    .panel {
+
+    }
+}
+atom-pane-container {
+    atom-pane {
+        background-color: #1b1b1b;
+        &:focus {
+            background-color: #1b1b1b;
+        }
+        .item-views {
+            z-index: 0;
+            position: relative;
+            border: 2px solid #fff;
+            padding: 8px;
+            margin: 0 8px 0 8px;
+            border: 2px solid #6fc0ba;
+            border-radius: 3px;
+            background-color: #1b1b1b;
+            color: #fff;
+
+        }
+
+
+    }
+
+    atom-pane.pane.active {
+        .item-views {
+            &:before {
+
+                position: absolute;
+                content: '';
+                border: 1px solid #31564f;
+                top: 3px; left: 3px; right: 3px; bottom: 3px;
+                border-radius: 3px;
+
+            }
+
+        }
+
+    }
+    atom-pane-axis.horizontal > * {
+        /* border-right: 1px solid @pane-item-border-color; */
+        &:last-child {
+            border-right: none;
+        }
+    }
+    atom-pane-axis.vertical > * {
+        border-bottom: 1px solid @pane-item-border-color;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}

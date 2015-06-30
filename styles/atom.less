@@ -1,0 +1,38 @@
+@import "ui-variables";
+
+html { height: 100%; min-height: 100%; padding: 8px; }
+body { background: #1b1b1b; overflow: hidden; height: 100%; min-height: 100%; padding: 4px; border: 1px solid #3c6e65;
+border-radius: 5px; }
+* {
+	box-sizing: border-box;
+
+
+}
+
+atom-workspace {
+  background-color: #1b1b1b;
+
+
+	border: 2px solid #6fc0ba;
+	border-radius: 5px;
+
+}
+
+
+.scrollbars-visible-always {
+  /deep/ ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  /deep/ ::-webkit-scrollbar-track,
+  /deep/ ::-webkit-scrollbar-corner {
+    background: @scrollbar-background-color;
+  }
+
+  /deep/ ::-webkit-scrollbar-thumb {
+    background: @scrollbar-color;
+    border-radius: 5px;
+    box-shadow: 0 0 1px black inset;
+  }
+}

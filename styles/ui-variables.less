@@ -7,40 +7,50 @@
 @medium-green: #3c6e65;
 @alt-green: #16ab8d;
 @dark-green: #31564f;
-@background-color: #1b1b1b;
-@orange: #f9963e;
-@gold: #ffcc00;
+@background-color: #1c1c1c;
 @white: #ffffff;
+
+@cyan-light: #afffff;
+@yellow: #ffdf00;
+@yellow-light: #ffed6c;
+@orange: #ff8700;
+@cyan: #00ffff;
+@teal: #00ffaf;
+@green: #87d75f;
+@cyan-dark: #00afaf;
+@cyan-very-dark: #005f5f;
+@cyan-darkest: #192e2e;
+
 
 // Text colors
 
-@text-color: @green;
-@text-color-subtle: @dark-green;
+@text-color: @cyan-light;
+@text-color-subtle: @cyan-dark;
 @text-color-highlight: @alt-green;
 @text-color-selected: @background-color;
 
 @text-color-info: @green;
 @text-color-success: @bright-green; /* turqoise */
-@text-color-warning: @gold;
+@text-color-warning: @yellow;
 @text-color-error: @orange;
 
 // Git status colors
 
-@text-color-ignored: @text-color-subtle;
-@text-color-added: @text-color-success;
-@text-color-renamed: @text-color-warning;
-@text-color-modified: @text-color-warning;
-@text-color-removed: @text-color-error;
+@text-color-ignored: @cyan-dark;
+@text-color-added: @green;
+@text-color-renamed: @yellow;
+@text-color-modified: @yellow;
+@text-color-removed: @orange;
 
 // Background colors
 
 @background-color-info: @green;
 @background-color-success: @bright-green;
-@background-color-warning: @gold;
+@background-color-warning: @yellow;
 @background-color-error: @orange;
 
-@background-color-highlight: rgba(255, 255, 255, 0.07);
-@background-color-selected: @green;
+@background-color-highlight: rgba(255, 255, 255, 1);
+@background-color-selected: @cyan-light;
 @app-background-color: @background-color;
 
 // Base colors
@@ -111,5 +121,5 @@
 }
 
 @font-family: 'Bitstream-Vera-Mono';
-@font-size: 11px;
+@font-size: 12px;
 @input-font-size: 14px;

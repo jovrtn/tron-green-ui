@@ -1,9 +1,20 @@
-@import "ui-mixins";
 @import "ui-variables";
 
-.status { .text(normal); }
-.status-added { .text(success); }
-.status-ignored { .text(subtle); }
-.status-modified { .text(warning); }
-.status-removed { .text(error); }
-.status-renamed { .text(info); }
+.status {
+    color: @text-color;
+}
+.status-ignored {
+    color: @text-color-subtle;
+}
+.status-added {
+    color: @text-color-added;
+}
+.status-modified {
+    color: @text-color-modified;
+}
+.status-removed {
+    color: @text-color-removed;
+}
+.status-renamed {
+    color: @text-color-modified;
+}

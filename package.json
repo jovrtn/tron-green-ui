@@ -1,11 +1,11 @@
 {
-  "name": "tron-legacy-green-ui",
+  "name": "tron-green-ui",
   "theme": "ui",
-  "version": "0.49.0",
+  "version": "0.0.0",
   "description": "A dark UI theme for Atom",
   "license": "MIT",
-  "repository": "https://github.com/atom/atom-dark-ui",
+  "repository": "https://github.com/jovrtn/tron-green-ui",
   "engines": {
-    "atom": ">0.40.0"
+    "atom": ">1.0.0"
   }
 }

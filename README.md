@@ -1,4 +1,4 @@
-# Atom Dark UI theme
+# TRON UI Theme for Atom [Green]
 
 A dark UI theme for Atom.
 

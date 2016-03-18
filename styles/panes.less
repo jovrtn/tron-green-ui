@@ -8,40 +8,34 @@
 }
 atom-pane-container {
     atom-pane {
-        background-color: #1b1b1b;
+        background-color: @background-color;
         &:focus {
-            background-color: #1b1b1b;
+            background-color: @background-color;
         }
         .item-views {
+            box-shadow: 0 0 5px 0 @dark-green;
             z-index: 0;
             position: relative;
-            border: 2px solid #fff;
             padding: 8px;
-            margin: 0 8px 0 8px;
-            border: 2px solid #6fc0ba;
+            margin: 0 8px;
+            border: 2px solid @text-color;
             border-radius: 3px;
-            background-color: #1b1b1b;
-            color: #fff;
-
+            background-color: @background-color;
         }
-
-
     }
-
     atom-pane.pane.active {
         .item-views {
             &:before {
-
                 position: absolute;
                 content: '';
-                border: 1px solid #31564f;
-                top: 3px; left: 3px; right: 3px; bottom: 3px;
+                border: 1px solid @dark-green;
+                top: 3px;
+                left: 3px;
+                right: 3px;
+                bottom: 3px;
                 border-radius: 3px;
-
             }
-
         }
-
     }
     atom-pane-axis.horizontal > * {
         /* border-right: 1px solid @pane-item-border-color; */
@@ -53,6 +47,138 @@ atom-pane-container {
         border-bottom: 1px solid @pane-item-border-color;
         &:last-child {
             border-bottom: none;
+        }
+    }
+}
+
+@tab-radius: 0;
+@modified-icon-width: 8px;
+@tab-skew: 0;
+@tab-top-padding: 0;
+@tab-bottom-border-height: 0;
+@tab-border: 0 solid @tab-border-color;
+@tab-bar-bottom-border-color: #111;
+@tab-max-width: 150px;
+@tab-height: 32px;
+
+// Tabs
+
+atom-pane .tab-bar {
+    height: 58px;
+    background: transparent;
+    padding: 0 0 0 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 5;
+    position: relative;
+    margin: 14px 8px 6px 8px;
+    &::-webkit-scrollbar {
+        display: block;
+        height: 1px;
+        border-radius: 20px;
+
+        background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: @dark-green;
+    }
+    .tab {
+        z-index: 1000;
+        position: relative;
+        top: @tab-top-padding;
+        height: @tab-height;
+        line-height: @tab-height;
+        padding: 0;
+        margin: 0 8px 0 0;
+        color: #31564f;
+        background-color: transparent;
+        border-radius: 3px;
+        transition: color 0.1s ease-in;
+        border: 2px solid @dark-green;
+        .close-icon {
+            right: 0;
+            z-index: 3;
+            text-align: right;
+            line-height: @tab-height;
+            color: #6fc0ba;
+            &:hover {
+                color: inherit;
+            }
+            opacity: 0;
+        }
+        &.modified:not(:hover) .close-icon {
+
+        }
+        &.modified:hover .close-icon:hover {
+            color: @text-color-highlight;
+        }
+        .title {
+            position: relative;
+            top: 28px;
+            text-align: center;
+            z-index: 1;
+            padding-right: 0;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inconsolata';
+            text-transform: uppercase;
+        }
+    }
+    .tab.active {
+        z-index: 1;
+        box-shadow: 0 0 5px 0 @dark-green;
+        position: relative;
+        color: #6fc0ba;
+        background: transparent;
+        position: relative;
+        border: 2px solid #79cac1;
+        .close-icon {
+            line-height: @tab-height - 1px;
+            color: #111;
+        }
+        .title {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+    }
+    .tab:hover {
+        color: #fff;
+        border: 2px solid #fff;
+    }
+    .tab.active:hover .close-icon {
+        color: @text-color;
+        &:hover {
+            color: inherit;
+        }
+    }
+    .placeholder {
+        background: transparent;
+        list-style: none;
+        content: '';
+        pointer-events: none;
+        width: 0;
+        height: 0;
+        top: 7px;
+        border-style: solid;
+        border-width: 4px 4px 0 4px;
+        border-color: #79cac1 transparent transparent transparent;
+        background: transparent;
+        margin: 0 0 0 -8px;
+        padding: 0;
+        &:after {
+            content: '';
+            /* margin-left: -9px; // center between tabs */
+            pointer-events: none;
+            width: 0;
+            height: 0;
+            top: 34px;
+            border-style: solid;
+            border-width: 0 4px 4px 4px;
+            border-color: transparent transparent #79cac1 transparent;
+            background: transparent;
+            margin: 0 0 0 -4px;
+            padding: 0;
         }
     }
 }

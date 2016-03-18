@@ -1,11 +1,70 @@
-@import "ui-mixins";
 @import "ui-variables";
 @import "buttons";
-.panel {
-    &.bordered {
+atom-panel {
+    status-bar {
 
+        text-transform: uppercase;
+        height: 30px;
+
+        margin: 12px 8px;
+
+        padding: 0;
+        border: 1px solid @green;
+
+        border-width: 1px 0 1px 0;
+
+        .inline-block {
+            font-weight: bold;
+            height: 30px;
+            line-height: 30px;
+        }
+        encoding-selector-status {
+            &:after {
+                content: '|';
+                padding-left: 11px;
+                display: inline-block;
+                color: #6fc0ba;
+            }
+        }
+        .file-info {
+            &:after {
+                content: '|';
+                padding-left: 11px;
+                display: inline-block;
+                color: #fff;
+            }
+        }
     }
 }
+atom-panel.left {
+    padding-top: 72px;
+    position: relative;
+    &:before {
+        z-index: 5;
+        text-align: center;
+        font-family: 'Bebas Neue';
+        text-align: center;
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        top: 14px;
+        right: 12px;
+        line-height: 50px;
+        color: #1b1b1b;
+        left: 21px;
+        border-radius: 8px;
+        font-size: 32px;
+        content: '';
+        background: #6fc0ba;
+        height: 49px;
+        border: 2px solid #6fc0ba;
+        background: transparent url("atom://tron-green-ui/atom.png") no-repeat 0 0;
+        background-position: 45% 46%;
+        background-size: auto 65%;
+    }
+}
+
+/*
 atom-panel,
 .tool-panel {
     position: relative;
@@ -24,37 +83,6 @@ atom-panel,
     }
     &.right,
     &.panel-right {
-
-    }
-}
-atom-panel-container.left {
-    padding-top: 72px;
-    position: relative;
-    &:before {
-        z-index: 5;
-        text-align: center;
-        font-family: 'Bebas Neue';
-        text-align: center;
-        position: absolute;
-        padding: 0;
-        margin: 0;
-        top: 12px;
-        right: 12px;
-        line-height: 50px;
-        color: #1b1b1b;
-        left: 21px;
-        border-radius: 8px;
-        font-size: 32px;
-        content: '';
-        background: #6fc0ba;
-        height: 49px;
-        background: #6fc0ba url("atom://tron-legacy-green-ui/atom.png") no-repeat 0 0;
-        background-position: 45% 48%;
-        background-size: auto 50%;
-    }
-}
-atom-panel {
-    &.left {
 
     }
 }
@@ -81,32 +109,5 @@ atom-panel {
         .btn-background(@bg, @hover, @selected, @text);
     }
 }
-status-bar {
-    font-family: 'Inconsolata';
-    color: #fff;
-    text-transform: uppercase;
-}
-status-bar {
-    height: 25px;
-    .inline-block {
-        font-weight: bold;
-        height: 25px;
-        line-height: 25px;
-    }
-    encoding-selector-status {
-        &:after {
-            content: '|';
-            padding-left: 11px;
-            display: inline-block;
-            color: #6fc0ba;
-        }
-    }
-    .file-info {
-        &:after {
-            content: '|';
-            padding-left: 11px;
-            display: inline-block;
-            color: #fff;
-        }
-    }
-}
+
+*/

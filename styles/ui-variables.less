@@ -1,42 +1,54 @@
-// Fonts
-
-@font-face {
-  font-family: 'Inconsolata';
-  src: url('atom://tron-legacy-green-ui/styles/Inconsolata.otf');
-}
-
+// styles/ui-variables.less
 
 // Colors
 
-@text-color: #6fc0ba;
-@text-color-subtle: #555;
-@text-color-highlight: #1b1b1b;
-@text-color-selected: @text-color-highlight;
-
+@bright-green: #00eeee;
+@green: #6fc0ba;
+@medium-green: #3c6e65;
+@alt-green: #16ab8d;
+@dark-green: #31564f;
 @background-color: #1b1b1b;
+@orange: #f9963e;
+@gold: #ffcc00;
+@white: #ffffff;
 
-@text-color-info: #5293d8;
-@text-color-success: #00eeee; /* turqoise */
-@text-color-warning: #ffcc00;
-@text-color-error: #c00;
+// Text colors
+
+@text-color: @green;
+@text-color-subtle: @dark-green;
+@text-color-highlight: @alt-green;
+@text-color-selected: @background-color;
+
+@text-color-info: @green;
+@text-color-success: @bright-green; /* turqoise */
+@text-color-warning: @gold;
+@text-color-error: @orange;
+
+// Git status colors
 
 @text-color-ignored: @text-color-subtle;
 @text-color-added: @text-color-success;
-@text-color-renamed: @text-color-info;
+@text-color-renamed: @text-color-warning;
 @text-color-modified: @text-color-warning;
 @text-color-removed: @text-color-error;
 
-@background-color-info: #0098ff;
-@background-color-success: #17ca65;
-@background-color-warning: #ffaa2c;
-@background-color-error: #c00;
+// Background colors
+
+@background-color-info: @green;
+@background-color-success: @bright-green;
+@background-color-warning: @gold;
+@background-color-error: @orange;
+
 @background-color-highlight: rgba(255, 255, 255, 0.07);
-@background-color-selected: #4182C4;
+@background-color-selected: @green;
+@app-background-color: @background-color;
 
-@app-background-color: #1b1b1b;
+// Base colors
 
-@base-background-color: #1b1b1b;
-@base-border-color: rgba(0, 0, 0, 0.5);
+@base-background-color: @background-color;
+@base-border-color: @background-color;
+
+// Component colors
 
 @pane-item-background-color: @base-background-color;
 @pane-item-border-color: rgba(0, 0, 0, 0.5);
@@ -44,15 +56,12 @@
 @input-background-color: #212224;
 @input-border-color: @base-border-color;
 
-@tool-panel-background-color: #1d1f21;
+@tool-panel-background-color: @background-color;
 @tool-panel-border-color: @base-border-color;
-
 @inset-panel-background-color: #161719;
 @inset-panel-border-color: @base-border-color;
-
 @panel-heading-background-color: #43484d;
 @panel-heading-border-color: fadein(@base-border-color, 10%);
-
 @overlay-background-color: #202123;
 @overlay-border-color: @background-color-highlight;
 
@@ -60,15 +69,16 @@
 @button-background-color-hover: lighten(@button-background-color, 5%);
 @button-background-color-selected: #5c6064;
 @button-border-color: @base-border-color;
-
 @tab-bar-background-color: #1b1b1b;
 @tab-bar-border-color: #000000;
 @tab-background-color: #000000;
 @tab-background-color-active: #000000;
 @tab-border-color: #000000;
 
-@scrollbar-background-color: #222425; // Needs to be opaque -> atom/atom/issues/4578
-@scrollbar-color: rgba(92, 92, 92, 0.5);
+@tree-view-background-color: @background-color;
+@tree-view-border-color: @background-color;
+
+// Site colors
 
 @ui-site-color-1: @background-color-success; // green
 @ui-site-color-2: @background-color-info; // blue
@@ -76,23 +86,30 @@
 @ui-site-color-4: #db2ff4; // purple
 @ui-site-color-5: #f5e11d; // yellow
 
-
 // Sizes
 
-@font-size: 11px;
-@input-font-size: 14px;
-
 @disclosure-arrow-size: 12px;
-
 @component-padding: 10px;
 @component-icon-padding: 5px;
 @component-icon-size: 16px;
 @component-line-height: 25px;
+
+// Misc
+
 @component-border-radius: 2px;
 
+// Scrollbar
 
+@scrollbar-background-color: #222425; // Needs to be opaque -> atom/atom/issues/4578
+@scrollbar-color: rgba(92, 92, 92, 0.5);
 
+// Fonts
 
-// Other
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('atom://tron-green-ui/styles/Inconsolata.otf');
+}
 
-/* @font-family: 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif; */
+@font-family: 'Inconsolata';
+@font-size: 11px;
+@input-font-size: 14px;

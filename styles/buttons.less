@@ -1,56 +1,95 @@
+// styles/buttons.less
 @import "ui-variables";
-@import "ui-mixins";
-
 .btn-background (@color, @hover-color, @selected-color, @text-color) {
-  color: @text-color;
-  background-color: transparent;
-  background-image: -webkit-linear-gradient(@color, darken(@color, 5%));
+    &:focus {
 
-  &:focus {
-    color: @text-color;
-  }
-  &:hover {
-    color: @text-color-highlight;
-    background-image: -webkit-linear-gradient(@hover-color, darken(@hover-color, 5%));
-  }
-  &.selected,
-  &.selected:hover {
-    color: @text-color-highlight;
-    background-image: -webkit-linear-gradient(darken(@selected-color, 5%), @selected-color);
-    &:hover {
-      background-image: -webkit-linear-gradient(@selected-color, darken(@selected-color, 5%));
     }
-  }
-}
+    &:hover {
 
+    }
+    &.selected,
+    &.selected:hover {
+
+    }
+}
 .btn-variant (@color) {
-  @bg: darken(@color, 10%);
-  @hover: @color;
-  @selected: @color;
-  .btn-background(@bg, @hover, @selected, @text-color-highlight);
-}
 
-.btn {
-  .btn-background(@button-background-color, @button-background-color-hover, @button-background-color-selected, @text-color);
 }
+.caret {
+    border-top: 5px solid #fff;
+    margin-top: -1px;
+}
+.btn,
+.btn.icon {
+    background-color: @text-color;
+    color: @background-color;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 3px;
+    &:hover {
+        background-color: @white;
+        color: @background-color;
+    }
+}
+.btn.btn-xs {
 
+}
+.btn.btn-sm {
+
+}
+.btn.btn-lg {
+
+}
 .btn.btn-primary {
-  .btn-variant(@background-color-info);
+    background-color: @text-color;
+    color: @background-color;
+    &:hover {
+        background-color: @white;
+    }
+}
+.btn.btn-primary.selected {
+
 }
 .btn.btn-info {
-  .btn-variant(@background-color-info);
+    background-color: @text-color;
+    color: @background-color;
+    &:hover {
+        background-color: @white;
+    }
+}
+.btn.btn-info.selected {
+
 }
 .btn.btn-success {
-  .btn-variant(@background-color-success);
+    background-color: @text-color-success;
+    color: @background-color;
+    &:hover {
+        background-color: @white;
+    }
+}
+.btn.btn-success.selected {
+    background-color: @text-color-success;
+    color: @background-color;
+    &:hover {
+        background-color: @white;
+    }
 }
 .btn.btn-warning {
-  .btn-variant(@background-color-warning);
+    background-color: @text-color-warning;
+    &:hover {
+        background-color: @white;
+    }
+}
+.btn.btn-warning.selected {
+
 }
 .btn.btn-error {
-  .btn-variant(@background-color-error);
+    background-color: @text-color-error;
+    color: @background-color;
+    &:hover {
+        background-color: @white;
+    }
 }
+.btn.btn-error.selected {
 
-.caret {
-  border-top: 5px solid #fff;
-  margin-top: -1px;
 }

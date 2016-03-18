@@ -1,6 +1,81 @@
 @import "ui-variables";
 @import "ui-mixins";
 @import "octicon-mixins";
+.list-group {
+    &.selected {
+        &::before {
+            color: @background-color;
+            background-color: @text-color;
+        }
+    }
+    .list-item {
+
+    }
+    .list-item.selected {
+        color: @background-color;
+        background-color: @text-color;
+        &::before {
+            color: @background-color;
+            background-color: @text-color;
+        }
+    }
+}
+.list-tree {
+    .list-item {
+        padding-left: 0 !important;
+    }
+    .selected {
+        color: @background-color;
+        &::before {
+            background-color: @text-color;
+        }
+    }
+}
+
+.select-list {
+
+    .l {
+        padding-left: 0 !important;
+    }
+    .selected {
+        color: @background-color;
+        &::before {
+            background-color: @text-color;
+        }
+    }
+}
+
+/*
+
+
+
+
+
+    .list-item.selected {
+        color: @background-color;
+        background-color: @text-color;
+        &::before {
+            color: @background-color;
+            background-color: @text-color;
+        }
+    }
+
+    .directory {
+        >.header {
+            color: #79cac1 !important;
+            border-bottom: 1px solid #79cac1;
+        }
+    }
+    .list-nested-item {
+        margin-left: 0;
+        padding-left: 0 !important;
+    }
+
+
+
+
+
+
 
 .list-group, .list-tree {
   li:not(.list-nested-item),
@@ -128,3 +203,5 @@ li.ui-draggable-dragging, li.ui-sortable-helper {
   background: @background-color-highlight;
   box-shadow: 0 0 1px @base-border-color;
 }
+
+*/

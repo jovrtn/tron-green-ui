@@ -3,6 +3,10 @@
 atom-panel {
     status-bar {
 
+
+
+
+
         text-transform: uppercase;
         height: 30px;
 
@@ -39,6 +43,10 @@ atom-panel {
 atom-panel.left {
     padding-top: 72px;
     position: relative;
+    padding: 72px 0px 0 0px;
+
+
+
     &:before {
         z-index: 5;
         text-align: center;
@@ -46,7 +54,7 @@ atom-panel.left {
         padding: 0;
         margin: 0;
         top: 12px;
-        right: 6px;
+        right: 4px;
         line-height: 50px;
         color: #1b1b1b;
         left: 12px;
@@ -55,11 +63,22 @@ atom-panel.left {
         content: '';
         background: @cyan-light;
         height: 49px;
-        border: 2px solid @cyan-light;
+
         background: transparent url("atom://tron-green-ui/atom.png") no-repeat 0 0;
         background-position: 45% 46%;
-        background-size: auto 65%;
+        background-size: auto 80%;
     }
+    //
+    // &:after {
+    //     position: absolute;
+    //     z-index: 4;
+    //     content: '';
+    //     display: block;
+    //     top: 60px; right: 0; left: 0; height: 60px;
+    //
+    //
+    //     box-shadow: inset 0px 30px 30px -20px @background-color;
+    // }
 }
 
 /*

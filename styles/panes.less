@@ -16,7 +16,7 @@ atom-pane-container {
             z-index: 0;
             position: relative;
             padding: px;
-            margin: 0 8px;
+            margin: 0 14px 0 0;
             border: 2px solid @cyan-light;
             border-radius: 3px;
             background-color: @background-color;
@@ -39,138 +39,6 @@ atom-pane-container {
         border-bottom: 1px solid @pane-item-border-color;
         &:last-child {
             border-bottom: none;
-        }
-    }
-}
-
-@tab-radius: 0;
-@modified-icon-width: 8px;
-@tab-skew: 0;
-@tab-top-padding: 0;
-@tab-bottom-border-height: 0;
-@tab-border: 0 solid @tab-border-color;
-@tab-bar-bottom-border-color: #111;
-@tab-max-width: 150px;
-@tab-height: 32px;
-
-// Tabs
-
-atom-pane .tab-bar {
-    height: 70px;
-    background: transparent;
-    padding: 12px 0 0 0;
-    overflow-x: auto;
-    overflow-y: hidden;
-    z-index: 5;
-    position: relative;
-    margin: 0px 8px 4px 8px;
-    &::-webkit-scrollbar {
-        display: block;
-        height: 1px;
-        border-radius: 20px;
-
-        background: transparent;
-    }
-    &::-webkit-scrollbar-thumb {
-        background: @dark-green;
-    }
-    .tab {
-        z-index: 1000;
-        position: relative;
-        top: @tab-top-padding;
-        height: @tab-height;
-        line-height: @tab-height;
-        padding: 0;
-        margin: 0 6px 0 0;
-        color: @cyan-very-dark;
-        background-color: transparent;
-        border-radius: 3px;
-        transition: color 0.1s ease-in;
-        border: 2px solid @cyan-very-dark;
-        .close-icon {
-            right: 0;
-            z-index: 3;
-            text-align: right;
-            line-height: @tab-height;
-            color: @cyan-light;
-            &:hover {
-                color: inherit;
-            }
-            opacity: 0;
-        }
-        &.modified:not(:hover) .close-icon {
-
-        }
-        &.modified:hover .close-icon:hover {
-            color: @text-color-highlight;
-        }
-        .title {
-            position: relative;
-            top: 28px;
-            text-align: center;
-            z-index: 1;
-            padding-right: 0;
-            margin: 0;
-            padding: 0;
-            text-transform: uppercase;
-        }
-    }
-    .tab.active {
-
-        z-index: 1;
-        position: relative;
-        color: @cyan-light;
-        background: transparent;
-        position: relative;
-        border: 2px solid @cyan-light;
-        .close-icon {
-            line-height: @tab-height - 1px;
-            color: red;
-        }
-        .title {
-            margin: 0;
-            padding: 0;
-            font-weight: bold;
-        }
-    }
-    .tab:hover {
-        color: #fff;
-        border: 2px solid #fff;
-
-    }
-    .tab.active:hover .close-icon {
-        color: @text-color;
-        &:hover {
-            color: inherit;
-        }
-    }
-    .placeholder {
-        background: transparent;
-        list-style: none;
-        content: '';
-        pointer-events: none;
-        width: 0;
-        height: 0;
-        top: 7px;
-        border-style: solid;
-        border-width: 4px 4px 0 4px;
-        border-color: @cyan-light transparent transparent transparent;
-        background: transparent;
-        margin: 0 0 0 -7px;
-        padding: 0;
-        &:after {
-            content: '';
-            /* margin-left: -9px; // center between tabs */
-            pointer-events: none;
-            width: 0;
-            height: 0;
-            top: 35px;
-            border-style: solid;
-            border-width: 0 4px 4px 4px;
-            border-color: transparent transparent @cyan-light transparent;
-            background: transparent;
-            margin: 0 0 0 -4px;
-            padding: 0;
         }
     }
 }

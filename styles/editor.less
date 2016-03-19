@@ -4,6 +4,10 @@
 atom-text-editor { padding: 0px; margin: 3px; border: 1px solid transparent; }
 atom-pane.active atom-text-editor { border-color: @cyan-very-dark; border-radius: 3px; }
 
+atom-text-editor {
+    .git-line-modified { border-color: @yellow !important; }
+}
+
 
 atom-text-editor[mini], atom-text-editor[mini]::shadow {
   color: @text-color-highlight;

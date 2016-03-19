@@ -13,10 +13,18 @@
 }
 .tree-view {
 
+    // margin: 0 8px;
+
+    margin: 0;
+    padding: 0 0px;
+
+
+
     margin-top: 1px;
-    padding: 0 0 8px 0px;
-    padding-right: 14px;
-    margin-left: 14px;
+    // padding: 0 0 0px 0px;
+    // padding-right: 14px;
+
+
 
     .list-tree {}
     .list-item {
@@ -33,6 +41,7 @@
         }
         &.status-modified {
             color: @yellow;
+
         }
         &.status-removed {
             color: @orange;
@@ -46,16 +55,12 @@
         &:before {
             background: @cyan-dark;
             box-shadow: 0 0 20px 0px @cyan-dark;
-
-            margin-right: 14px;
-
         }
 
         &.status-modified:before {
             background: @yellow;
             box-shadow: 0 0 20px 0px @yellow;
 
-            margin-right: 14px;
         }
 
         line-height: 24px !important;
@@ -63,9 +68,17 @@
     .directory {
         margin: 0;
         padding: 0;
+
+
+
         .header {
             color: #79cac1;
             border-bottom: 1px dotted #005f5f;
+
+            &:before {
+                background-color: transparent;
+                box-shadow: none;
+            }
         }
     }
     .directory.status-ignored {
@@ -75,6 +88,7 @@
         }
     }
     .directory.project-root {
+        padding: 0 14px;
         // border-top: 1px solid #79cac1; padding-top: 6px;
         // padding-bottom: 6px;
         margin-bottom: 8px;

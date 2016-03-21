@@ -4,6 +4,7 @@ html {
     height: 100%;
     min-height: 100%;
     padding: 6px;
+    background: @background-color;
 }
 body {
     background: @background-color;
@@ -27,7 +28,7 @@ atom-workspace {
 
 atom-workspace-axis.vertical {
     z-index: 2;
-    box-shadow: 0 -5px 20px 5px @background-color;
+    box-shadow: -2px 0px 10px 5px @background-color;
 }
 .scrollbars-visible-always {
     /deep/::-webkit-scrollbar {
@@ -36,7 +37,7 @@ atom-workspace-axis.vertical {
     }
     /deep/::-webkit-scrollbar-track,
     /deep/::-webkit-scrollbar-corner {
-        background: @scrollbar-background-color;
+        background: red;
     }
     /deep/::-webkit-scrollbar-thumb {
         background: @scrollbar-color;

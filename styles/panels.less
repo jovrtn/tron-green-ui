@@ -65,7 +65,7 @@ atom-panel.left {
         top: 8px;
         right: 4px;
         line-height: 50px;
-        color: #1b1b1b;
+        color: @background-color;
         left: 12px;
         border-radius: 4px;
         font-size: 32px;
@@ -89,51 +89,3 @@ atom-panel.left {
     //     box-shadow: inset 0px 30px 30px -20px @background-color;
     // }
 }
-
-/*
-atom-panel,
-.tool-panel {
-    position: relative;
-    &.bottom,
-    &.panel-bottom {
-        border-top: none;
-        margin: 12px 8px;
-        border-top: 1px solid #6fc0ba;
-        border-bottom: 1px solid #6fc0ba;
-        background: #1b1b1b;
-        padding: 0;
-    }
-    &.left,
-    &.panel-left {
-
-    }
-    &.right,
-    &.panel-right {
-
-    }
-}
-.inset-panel {
-    position: relative;
-}
-.is-blurred {
-    atom-panel,
-    .inset-panel {
-
-    }
-}
-.panel-heading {
-    border-bottom: 1px solid @panel-heading-border-color;
-    border-top: 1px solid fadein(@background-color-highlight, 10%);
-    background-color: transparent;
-    .btn {
-        padding-left: 8px;
-        padding-right: 8px;
-        @bg: lighten(@button-background-color, 10%);
-        @hover: lighten(@button-background-color-hover, 10%);
-        @selected: lighten(@button-background-color-selected, 10%);
-        @text: lighten(@text-color, 10%);
-        .btn-background(@bg, @hover, @selected, @text);
-    }
-}
-
-*/

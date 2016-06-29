@@ -1,58 +1,46 @@
 @import "ui-variables";
-/*
-.tree-view-resizer {
-    .tree-view-resize-handle {
-        width: 0;
-    }
-}
-
-*/
 
 .tree-view-resizer {
 
 }
+
 .tree-view {
-
-    // margin: 0 8px;
-
     margin: 0;
     padding: 0 0px;
-
-
-
-    margin-top: 1px;
-    // padding: 0 0 0px 0px;
-    // padding-right: 14px;
-
-
 
     .list-tree {}
     .list-item {
 
-
         &.status {
             color: @cyan-light;
         }
+
         &.status-ignored {
             color: @cyan-very-dark;
         }
+
         &.status-added {
             color: @teal;
         }
+
         &.status-modified {
             color: @yellow;
-
         }
+
         &.status-removed {
             color: @orange;
         }
+
         &.status-renamed {
             color: @yellow;
         }
+
         &.selected {
-            color: #fff;
+            color: @black;
         }
+
         &:before {
+            color: inherit;
             background: @cyan-dark;
             box-shadow: 0 0 20px 0px @cyan-dark;
         }
@@ -60,16 +48,14 @@
         &.status-modified:before {
             background: @yellow;
             box-shadow: 0 0 20px 0px @yellow;
-
         }
 
         line-height: 24px !important;
     }
+
     .directory {
         margin: 0;
         padding: 0;
-
-
 
         .header {
             color: #79cac1;
@@ -93,9 +79,8 @@
         // padding-bottom: 6px;
         margin-bottom: 8px;
         >.header {
-            color: #fff;
+            color: @white;
             font-weight: bold;
-            text-transform: uppercase;
             letter-spacing: 0.08em;
             font-size: 11px;
             border-top: 2px solid @cyan-light;
@@ -104,9 +89,7 @@
             padding: 2px 0 2px 4px;
             margin-bottom: 3px;
 
-
             &:after {
-
                 content: '';
                 width: 100%;
                 height: 1px;
@@ -115,36 +98,16 @@
                 position: absolute;
                 bottom: 3px; left: 0; right: 0;
             }
-
-
         }
     }
+
     .directory.project-root.selected {
         &:before {
             background-color: transparent;
         }
+
         >.header {
             background-color: transparent;
         }
     }
-    //@background-color-selected
 }
-/*
-.focusable-panel {
-    opacity: 1;
-    &:focus {
-        background: @background-color;
-        .selected:before {
-            background: transparent;
-            color: @background-color;
-        }
-    }
-}
-[data-show-on-right-side=true] {
-    .tree-view .selected:before,
-    .focusable-panel {
-        /* box-shadow: inset 3px 0 0 rgba(0,0,0, .05);
-    }
-}
-
-*/

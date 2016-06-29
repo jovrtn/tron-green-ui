@@ -2,21 +2,11 @@
 @import "buttons";
 
 atom-panel-container.left {
-
-
-
-padding: 0 0px;
-
+    padding: 0 0px;
 }
 
 atom-panel {
     status-bar {
-
-
-
-
-
-        text-transform: uppercase;
         height: 30px;
 
         margin: 12px 8px;
@@ -31,6 +21,7 @@ atom-panel {
             height: 30px;
             line-height: 30px;
         }
+
         encoding-selector-status {
             &:after {
                 content: '|';
@@ -39,6 +30,7 @@ atom-panel {
                 color: #6fc0ba;
             }
         }
+
         .file-info {
             &:after {
                 content: '|';
@@ -49,12 +41,11 @@ atom-panel {
         }
     }
 }
+
 atom-panel.left {
     padding-top: 72px;
     position: relative;
     padding: 72px 0px 0 0px;
-
-
 
     &:before {
         z-index: 5;
@@ -77,15 +68,4 @@ atom-panel.left {
         background-position: 45% 46%;
         background-size: auto 80%;
     }
-    //
-    // &:after {
-    //     position: absolute;
-    //     z-index: 4;
-    //     content: '';
-    //     display: block;
-    //     top: 60px; right: 0; left: 0; height: 60px;
-    //
-    //
-    //     box-shadow: inset 0px 30px 30px -20px @background-color;
-    // }
 }

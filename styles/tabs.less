@@ -39,45 +39,26 @@ atom-pane .tab-bar {
         height: @tab-height;
         line-height: @tab-height;
         padding: 0;
-        margin: 0 6px 0 0;
+        margin: 6px 6px 0 0;
         color: @cyan-very-dark;
         background-color: transparent;
         border-radius: 3px;
         transition: color 0.1s ease-in;
         border: 2px solid @cyan-very-dark;
-        .close-icon {
-            right: 0;
-            z-index: 3;
-            text-align: right;
-            line-height: @tab-height;
-            color: @cyan-light;
-            &:hover {
-                color: inherit;
-            }
-            opacity: 0;
-        }
-        &.modified:not(:hover) .close-icon {
 
-        }
-        &.modified:hover .close-icon:hover {
-            color: @text-color-highlight;
-        }
         .title {
             position: relative;
-            top: 28px;
             text-align: center;
             z-index: 1;
             padding-right: 0;
             margin: 0;
             padding: 0;
-            text-transform: uppercase;
         }
 
         &:hover {
             color: #fff;
             border: 2px solid #fff;
         }
-
 
         &.active {
 
@@ -89,9 +70,31 @@ atom-pane .tab-bar {
             border: 2px solid @cyan-light;
 
             .close-icon {
-                line-height: @tab-height - 1px;
-                color: red;
+                top: 0;
+                right: 0;
+                z-index: 2;
+                padding: 0 1em/1.25;
+                height: @tab-height - 1;
+                line-height: @tab-height;
+                text-align: center;
+                transform: scale(0);
+                transition: transform .08s;
+                &:hover {
+                    opacity: .7;
+                }
+                &:active {
+                    opacity: .4;
+                }
+                &::before {
+                    font-size: inherit;
+                }
             }
+
+            &:hover .close-icon {
+                transform: scale(1);
+                transition-duration: .16s;
+            }
+
             .title {
                 margin: 0;
                 padding: 0;
@@ -117,25 +120,14 @@ atom-pane .tab-bar {
 
             }
             &:hover .close-icon {
-                color: @text-color;
-                &:hover {
-                    color: inherit;
-                }
+                color: red;
             }
 
             &:hover:after {
-
                 border-color: rgba(255,255,255,.3);
-
             }
         }
-
-
-
-
     }
-
-
 
     .placeholder {
         background: transparent;
